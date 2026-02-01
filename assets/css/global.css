@@ -219,6 +219,201 @@ main {
 }
 
 /* ============================================
+   Icon Links
+   ============================================ */
+
+.icon-links {
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+.icon-link {
+  color: var(--muted);
+  transition: color 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+}
+
+.icon-link:hover {
+  color: var(--link);
+  text-decoration: none;
+}
+
+.icon-link:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.icon-link .icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* ============================================
+   Home Page
+   ============================================ */
+
+.bio {
+  margin: 2.5rem 0;
+  font-size: 19px;
+  line-height: 1.65;
+}
+
+.bio p {
+  margin-bottom: 0.5rem;
+}
+
+.blog-section {
+  margin: 3rem 0;
+}
+
+.blog-section h2 {
+  margin-bottom: 1.5rem;
+}
+
+.post-list {
+  list-style: none;
+  padding: 0;
+}
+
+.post-item {
+  margin-bottom: 1.25rem;
+}
+
+.post-link {
+  display: block;
+  text-decoration: none;
+}
+
+.post-title {
+  font-size: 18px;
+  color: var(--text);
+  margin-bottom: 0.25rem;
+}
+
+.post-link:hover .post-title {
+  color: var(--link);
+}
+
+.post-date {
+  font-size: 15px;
+  color: var(--muted);
+  font-family: 'Satoshi', system-ui, sans-serif;
+}
+
+.view-all {
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: 16px;
+}
+
+.last-updated {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+  font-size: 14px;
+  color: var(--muted);
+  font-family: 'Satoshi', system-ui, sans-serif;
+}
+
+/* ============================================
+   Blog Post Page
+   ============================================ */
+
+.post {
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.back-button {
+  display: inline-block;
+  margin-bottom: 2rem;
+  font-size: 16px;
+  font-family: 'Satoshi', system-ui, sans-serif;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.back-button:hover {
+  color: var(--link);
+  text-decoration: none;
+}
+
+.back-button:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.post-header {
+  margin-bottom: 2.5rem;
+}
+
+.post-header h1 {
+  margin-bottom: 0.5rem;
+}
+
+.post-header .post-date {
+  display: block;
+  color: var(--muted);
+  font-size: 15px;
+  font-family: 'Satoshi', system-ui, sans-serif;
+}
+
+.post-content {
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+.post-content h2 {
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.post-content h3 {
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.post-content p {
+  margin-bottom: 1.25rem;
+}
+
+.post-content ul,
+.post-content ol {
+  margin-bottom: 1.25rem;
+  padding-left: 1.5rem;
+}
+
+.post-content li {
+  margin-bottom: 0.5rem;
+}
+
+.post-content code {
+  background-color: var(--cardBg);
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+.post-content pre {
+  background-color: var(--cardBg);
+  padding: 1rem;
+  border-radius: 4px;
+  overflow-x: auto;
+  margin-bottom: 1.25rem;
+}
+
+.post-content pre code {
+  background: none;
+  padding: 0;
+}
+
+/* ============================================
    Responsive
    ============================================ */
 

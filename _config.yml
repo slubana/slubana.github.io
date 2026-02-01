@@ -8,6 +8,14 @@ baseurl: ""  # Empty for root domain (slubana.github.io)
 markdown: kramdown
 permalink: /blog/:title/  # Blog posts at /blog/<slug>/
 
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
 # Exclude from build
 exclude:
   - Gemfile
