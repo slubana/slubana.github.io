@@ -32,19 +32,30 @@ title: Home
   <h2>Gallery</h2>
   <div class="home-gallery-grid">
     {% for item in site.data.gallery_manifest limit: 3 %}
-    <a href="{{ '/gallery/' | relative_url }}" class="home-gallery-link">
-      <img
-        src="{{ item.thumb | relative_url }}"
-        alt="Photo from {{ item.date }}"
-        class="home-gallery-image"
-        loading="lazy">
-    </a>
+    <img
+      src="{{ item.thumb | relative_url }}"
+      data-full="{{ item.full | relative_url }}"
+      alt="Photo from {{ item.date }}"
+      class="gallery-image home-gallery-image"
+      loading="lazy">
     {% endfor %}
   </div>
   {% if site.data.gallery_manifest.size > 3 %}
   <a href="{{ '/gallery/' | relative_url }}" class="view-all">View all</a>
   {% endif %}
 </section>
+
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox" style="display: none;">
+  <div class="lightbox-backdrop"></div>
+  <div class="lightbox-content">
+    <button class="lightbox-close" aria-label="Close">&times;</button>
+    <button class="lightbox-prev" aria-label="Previous">‹</button>
+    <button class="lightbox-next" aria-label="Next">›</button>
+    <img id="lightbox-image" src="" alt="">
+  </div>
+</div>
+<script src="{{ '/assets/js/lightbox.js' | relative_url }}"></script>
 {% endif %}
 
 {% include icon-links.html %}
