@@ -3,7 +3,7 @@ layout: default
 ---
 
 <article class="post">
-  <a href="{{ '/blog/' | relative_url }}" class="back-button">← Back</a>
+  <a href="{{ '/blog/' | relative_url }}" class="back-button" data-fallback="{{ '/blog/' | relative_url }}">← Back</a>
 
   <header class="post-header">
     <h1>{{ page.title }}</h1>

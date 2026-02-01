@@ -1,7 +1,7 @@
 /**
  * Blog Post Back Button Logic
  * If user came from Home or Blog index, back returns them there.
- * If user landed externally, back goes to /blog/
+ * If user landed externally, back goes to blog index (from data-fallback)
  */
 
 (function() {
@@ -13,8 +13,9 @@
 
   const referrer = document.referrer;
   const currentOrigin = window.location.origin;
+  const fallbackUrl = backButton.getAttribute('data-fallback');
 
-  let backUrl = backButton.getAttribute('href'); // Default is /blog/
+  let backUrl = fallbackUrl;
 
   // Check if referrer is from same origin
   if (referrer && referrer.startsWith(currentOrigin)) {
@@ -27,7 +28,7 @@
         backUrl = referrerPath;
       }
     } catch (e) {
-      // If URL parsing fails, keep default
+      // If URL parsing fails, use fallback
     }
   }
 

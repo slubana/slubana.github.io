@@ -1,14 +1,15 @@
+# local-only originals
+gallery-originals/
+
+# node deps for local gallery script
+node_modules/
+
 # Jekyll build output
 _site/
+.sass-cache/
 .jekyll-cache/
 .jekyll-metadata
 
-# Ruby dependencies
-.bundle/
-vendor/
-
-# Node dependencies (for local image pipeline)
-node_modules/
-
-# Local image originals (not served)
-gallery-originals/
+# OS/editor noise
+.DS_Store
+.vscode/
