@@ -2,9 +2,9 @@
 layout: default
 title: Home
 ---
-
+<h1>Hi, I'm Sehaj</h1>
 <div class="bio">
-  <p>Hi, I’m Sehaj! I’m a Product Marketing Manager at Sage Intacct, focused on the Sage Intacct Platform.</p>
+  <p>I'm a Product Marketing Manager at <a href="https://www.sage.com/en-us/sage-business-cloud/intacct/">Sage Intacct</a>, focused on the Sage Intacct Platform.</p>
   <p>Previously, I completed an MFin at McGill after studying Mechatronics Engineering at the University of Waterloo.</p>
   <p>Based in Vancouver, interested in the intersection of technology and business.</p>
 </div>
@@ -26,6 +26,26 @@ title: Home
   <a href="{{ '/blog/' | relative_url }}" class="view-all">View all</a>
   {% endif %}
 </section>
+
+{% if site.data.gallery_manifest.size > 0 %}
+<section class="gallery-section">
+  <h2>Gallery</h2>
+  <div class="home-gallery-grid">
+    {% for item in site.data.gallery_manifest limit: 3 %}
+    <a href="{{ '/gallery/' | relative_url }}" class="home-gallery-link">
+      <img
+        src="{{ item.thumb | relative_url }}"
+        alt="Photo from {{ item.date }}"
+        class="home-gallery-image"
+        loading="lazy">
+    </a>
+    {% endfor %}
+  </div>
+  {% if site.data.gallery_manifest.size > 3 %}
+  <a href="{{ '/gallery/' | relative_url }}" class="view-all">View all</a>
+  {% endif %}
+</section>
+{% endif %}
 
 {% include icon-links.html %}
 

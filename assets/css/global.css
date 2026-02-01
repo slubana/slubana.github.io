@@ -309,6 +309,15 @@ main {
   display: inline-block;
   margin-top: 1rem;
   font-size: 16px;
+  font-family: 'Satoshi', system-ui, sans-serif;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.view-all:hover {
+  color: var(--link);
+  text-decoration: none;
 }
 
 .last-updated {
@@ -318,6 +327,47 @@ main {
   font-size: 14px;
   color: var(--muted);
   font-family: 'Satoshi', system-ui, sans-serif;
+}
+
+.gallery-section {
+  margin: 3rem 0;
+}
+
+.gallery-section h2 {
+  margin-bottom: 1.5rem;
+}
+
+.home-gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
+}
+
+@media (min-width: 480px) {
+  .home-gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .home-gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.home-gallery-link {
+  display: block;
+}
+
+.home-gallery-image {
+  width: 100%;
+  display: block;
+  border-radius: 2px;
+  transition: opacity 0.2s ease;
+}
+
+.home-gallery-image:hover {
+  opacity: 0.9;
 }
 
 /* ============================================
