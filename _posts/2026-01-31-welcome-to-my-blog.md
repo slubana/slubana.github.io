@@ -1,6 +1,6 @@
 ---
 title: "Welcome to My Blog"
-date: 2026-01-15
+date: 2026-01-31
 ---
 
 This is my first blog post. I'm excited to share my thoughts and experiences here.
