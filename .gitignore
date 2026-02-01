@@ -1,0 +1,14 @@
+# Jekyll build output
+_site/
+.jekyll-cache/
+.jekyll-metadata
+
+# Ruby dependencies
+.bundle/
+vendor/
+
+# Node dependencies (for local image pipeline)
+node_modules/
+
+# Local image originals (not served)
+gallery-originals/
