@@ -30,9 +30,81 @@
     "thumb": "/assets/gallery/thumb/2026-01-24_sanfrancisco001.webp"
   },
   {
+    "id": "2025-12-01_vancouver001",
+    "date": "2025-12-01",
+    "full": "/assets/gallery/full/2025-12-01_vancouver001.webp",
+    "thumb": "/assets/gallery/thumb/2025-12-01_vancouver001.webp"
+  },
+  {
+    "id": "2025-11-22_sanfrancisco001",
+    "date": "2025-11-22",
+    "full": "/assets/gallery/full/2025-11-22_sanfrancisco001.webp",
+    "thumb": "/assets/gallery/thumb/2025-11-22_sanfrancisco001.webp"
+  },
+  {
+    "id": "2025-11-02_vancouver001",
+    "date": "2025-11-02",
+    "full": "/assets/gallery/full/2025-11-02_vancouver001.webp",
+    "thumb": "/assets/gallery/thumb/2025-11-02_vancouver001.webp"
+  },
+  {
+    "id": "2025-10-15_vancouver002",
+    "date": "2025-10-15",
+    "full": "/assets/gallery/full/2025-10-15_vancouver002.webp",
+    "thumb": "/assets/gallery/thumb/2025-10-15_vancouver002.webp"
+  },
+  {
+    "id": "2025-10-13_montreal001",
+    "date": "2025-10-13",
+    "full": "/assets/gallery/full/2025-10-13_montreal001.webp",
+    "thumb": "/assets/gallery/thumb/2025-10-13_montreal001.webp"
+  },
+  {
+    "id": "2025-10-04_vancouver001",
+    "date": "2025-10-04",
+    "full": "/assets/gallery/full/2025-10-04_vancouver001.webp",
+    "thumb": "/assets/gallery/thumb/2025-10-04_vancouver001.webp"
+  },
+  {
+    "id": "2025-09-21_vancouver005",
+    "date": "2025-09-21",
+    "full": "/assets/gallery/full/2025-09-21_vancouver005.webp",
+    "thumb": "/assets/gallery/thumb/2025-09-21_vancouver005.webp"
+  },
+  {
+    "id": "2025-09-21_vancouver004",
+    "date": "2025-09-21",
+    "full": "/assets/gallery/full/2025-09-21_vancouver004.webp",
+    "thumb": "/assets/gallery/thumb/2025-09-21_vancouver004.webp"
+  },
+  {
+    "id": "2025-09-21_vancouver003",
+    "date": "2025-09-21",
+    "full": "/assets/gallery/full/2025-09-21_vancouver003.webp",
+    "thumb": "/assets/gallery/thumb/2025-09-21_vancouver003.webp"
+  },
+  {
+    "id": "2025-08-26_vancouver003",
+    "date": "2025-08-26",
+    "full": "/assets/gallery/full/2025-08-26_vancouver003.webp",
+    "thumb": "/assets/gallery/thumb/2025-08-26_vancouver003.webp"
+  },
+  {
+    "id": "2025-08-26_vancouver002",
+    "date": "2025-08-26",
+    "full": "/assets/gallery/full/2025-08-26_vancouver002.webp",
+    "thumb": "/assets/gallery/thumb/2025-08-26_vancouver002.webp"
+  },
+  {
     "id": "2025-08-26_vancouver001",
     "date": "2025-08-26",
     "full": "/assets/gallery/full/2025-08-26_vancouver001.webp",
     "thumb": "/assets/gallery/thumb/2025-08-26_vancouver001.webp"
+  },
+  {
+    "id": "2025-08-23_sanfrancisco001",
+    "date": "2025-08-23",
+    "full": "/assets/gallery/full/2025-08-23_sanfrancisco001.webp",
+    "thumb": "/assets/gallery/thumb/2025-08-23_sanfrancisco001.webp"
   }
 ]
