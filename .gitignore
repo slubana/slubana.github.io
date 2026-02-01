@@ -22,3 +22,6 @@ vendor/
 Thumbs.db
 Desktop.ini
 Gemfile.lock
+
+# Local documentation
+README.md
