@@ -13,3 +13,12 @@ _site/
 # OS/editor noise
 .DS_Store
 .vscode/
+
+.bundle/
+vendor/
+*.log
+.env
+.env.*
+Thumbs.db
+Desktop.ini
+Gemfile.lock
