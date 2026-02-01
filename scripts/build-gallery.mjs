@@ -9,9 +9,11 @@
  */
 
 import sharp from 'sharp';
-import { glob } from 'fast-glob';
+import fg from 'fast-glob';
 import { mkdir, writeFile } from 'fs/promises';
 import { basename, extname } from 'path';
+
+const { glob } = fg;
 
 const INPUT_DIR = 'gallery-originals';
 const OUTPUT_THUMB_DIR = 'assets/gallery/thumb';
