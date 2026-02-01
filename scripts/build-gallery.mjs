@@ -76,7 +76,6 @@ async function processImages() {
           withoutEnlargement: true
         })
         .webp({ quality: THUMB_QUALITY })
-        .withMetadata(false) // Strip metadata
         .toFile(`${OUTPUT_THUMB_DIR}/${outputName}`);
 
       console.log(`   ✓ Thumb: ${OUTPUT_THUMB_DIR}/${outputName}`);
@@ -88,7 +87,6 @@ async function processImages() {
           withoutEnlargement: true
         })
         .webp({ quality: FULL_QUALITY })
-        .withMetadata(false) // Strip metadata
         .toFile(`${OUTPUT_FULL_DIR}/${outputName}`);
 
       console.log(`   ✓ Full:  ${OUTPUT_FULL_DIR}/${outputName}\n`);
