@@ -1,0 +1,646 @@
+/* ============================================
+   Theme Variables
+   ============================================ */
+
+:root[data-theme="light"] {
+  --bg: #F7F3EA;
+  --text: #111111;
+  --muted: #4B4B4B;
+  --border: #E6E0D6;
+  --link: #2F6FED;
+  --linkHover: #2459BD;
+  --cardBg: #FBF8F2;
+  --shadow: rgba(17, 17, 17, 0.06);
+}
+
+:root[data-theme="dark"] {
+  --bg: #0F0D0B;
+  --text: #E9E1D6;
+  --muted: #B7AEA2;
+  --border: #2A241F;
+  --link: #7AA2FF;
+  --linkHover: #9BB9FF;
+  --cardBg: #14110E;
+  --shadow: rgba(0, 0, 0, 0.35);
+}
+
+/* ============================================
+   Reset & Base Styles
+   ============================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Newsreader', Georgia, 'Times New Roman', serif;
+  font-size: 18px;
+  line-height: 1.65;
+  color: var(--text);
+  background-color: var(--bg);
+  transition: background-color 0.2s ease, color 0.2s ease;
+  overflow-x: hidden;
+}
+
+/* ============================================
+   Typography
+   ============================================ */
+
+h1, h2, h3, h4, h5, h6,
+.site-header,
+.nav-link,
+.theme-toggle {
+  font-family: 'Satoshi', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: 0.75rem;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+p {
+  margin-bottom: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 48px;
+  }
+}
+
+/* ============================================
+   Links
+   ============================================ */
+
+a {
+  color: var(--link);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+a:hover {
+  color: var(--linkHover);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 2px;
+}
+
+/* ============================================
+   Layout
+   ============================================ */
+
+main {
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 2rem 24px;
+}
+
+@media (max-width: 640px) {
+  main {
+    padding: 1.5rem 20px;
+  }
+}
+
+/* ============================================
+   Header
+   ============================================ */
+
+.site-header {
+  border-bottom: 1px solid var(--border);
+  padding: 1rem 24px;
+  position: sticky;
+  top: 0;
+  background-color: var(--bg);
+  z-index: 100;
+  transition: background-color 0.2s ease;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.site-name:hover {
+  color: var(--link);
+  text-decoration: none;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-link {
+  font-size: 16px;
+  color: var(--text);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.nav-link:hover {
+  color: var(--link);
+  text-decoration: none;
+}
+
+/* ============================================
+   Theme Toggle Button
+   ============================================ */
+
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text);
+  transition: color 0.15s ease;
+}
+
+.theme-toggle:hover {
+  color: var(--link);
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.theme-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Show/hide icons based on theme */
+[data-theme="light"] .moon-icon {
+  display: none;
+}
+
+[data-theme="dark"] .sun-icon {
+  display: none;
+}
+
+/* ============================================
+   Icon Links
+   ============================================ */
+
+.icon-links {
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+.icon-link {
+  color: var(--muted);
+  transition: color 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+}
+
+.icon-link:hover {
+  color: var(--link);
+  text-decoration: none;
+}
+
+.icon-link:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.icon-link .icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* ============================================
+   Home Page
+   ============================================ */
+
+.bio {
+  margin: 2.5rem 0;
+  font-size: 19px;
+  line-height: 1.65;
+}
+
+.bio p {
+  margin-bottom: 0.5rem;
+}
+
+.blog-section {
+  margin: 3rem 0;
+}
+
+.blog-section h2 {
+  margin-bottom: 1.5rem;
+}
+
+.post-list {
+  list-style: none;
+  padding: 0;
+}
+
+.post-item {
+  margin-bottom: 1.25rem;
+}
+
+.post-link {
+  display: block;
+  text-decoration: none;
+}
+
+.post-title {
+  font-size: 18px;
+  color: var(--text);
+  margin-bottom: 0.25rem;
+}
+
+.post-link:hover .post-title {
+  color: var(--link);
+}
+
+.post-date {
+  font-size: 15px;
+  color: var(--muted);
+  font-family: 'Satoshi', system-ui, sans-serif;
+}
+
+.view-all {
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: 16px;
+  font-family: 'Satoshi', system-ui, sans-serif;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.view-all:hover {
+  color: var(--link);
+  text-decoration: none;
+}
+
+.last-updated {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+  font-size: 14px;
+  color: var(--muted);
+  font-family: 'Satoshi', system-ui, sans-serif;
+}
+
+.gallery-section {
+  margin: 3rem 0;
+}
+
+.gallery-section h2 {
+  margin-bottom: 1.5rem;
+}
+
+.home-gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
+}
+
+@media (min-width: 480px) {
+  .home-gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .home-gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.home-gallery-link {
+  display: block;
+}
+
+.home-gallery-image {
+  width: 100%;
+  display: block;
+  border-radius: 2px;
+  transition: opacity 0.2s ease;
+}
+
+.home-gallery-image:hover {
+  opacity: 0.9;
+}
+
+/* ============================================
+   Blog Post Page
+   ============================================ */
+
+.post {
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.back-button {
+  display: inline-block;
+  margin-bottom: 2rem;
+  font-size: 16px;
+  font-family: 'Satoshi', system-ui, sans-serif;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.back-button:hover {
+  color: var(--link);
+  text-decoration: none;
+}
+
+.back-button:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.post-header {
+  margin-bottom: 2.5rem;
+}
+
+.post-header h1 {
+  margin-bottom: 0.5rem;
+}
+
+.post-header .post-date {
+  display: block;
+  color: var(--muted);
+  font-size: 15px;
+  font-family: 'Satoshi', system-ui, sans-serif;
+}
+
+.post-content {
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+.post-content h2 {
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.post-content h3 {
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.post-content p {
+  margin-bottom: 1.25rem;
+}
+
+.post-content ul,
+.post-content ol {
+  margin-bottom: 1.25rem;
+  padding-left: 1.5rem;
+}
+
+.post-content li {
+  margin-bottom: 0.5rem;
+}
+
+.post-content code {
+  background-color: var(--cardBg);
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+.post-content pre {
+  background-color: var(--cardBg);
+  padding: 1rem;
+  border-radius: 4px;
+  overflow-x: auto;
+  margin-bottom: 1.25rem;
+}
+
+.post-content pre code {
+  background: none;
+  padding: 0;
+}
+
+/* ============================================
+   Gallery Page
+   ============================================ */
+
+.gallery-grid {
+  /* Break out to full viewport, then center at max 1120px */
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  box-sizing: border-box;
+  padding-left: max(24px, calc((100vw - 1120px) / 2));
+  padding-right: max(24px, calc((100vw - 1120px) / 2));
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
+}
+
+.gallery-image {
+  width: 100%;
+  display: block;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+  border-radius: 2px;
+}
+
+.gallery-image:hover {
+  opacity: 0.9;
+}
+
+.gallery-empty {
+  text-align: center;
+  color: var(--muted);
+  font-size: 18px;
+  margin-top: 3rem;
+}
+
+/* Gallery responsive grid */
+@media (min-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .gallery-grid {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+/* ============================================
+   Lightbox
+   ============================================ */
+
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.95);
+}
+
+.lightbox-content {
+  position: relative;
+  z-index: 1001;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox-content img {
+  max-width: 100%;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 2px;
+}
+
+.lightbox-close {
+  position: fixed;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 3rem;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 1002;
+  padding: 0.5rem;
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+
+.lightbox-close:hover {
+  opacity: 1;
+}
+
+.lightbox-prev,
+.lightbox-next {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: white;
+  font-size: 3rem;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 1002;
+  padding: 1rem 1.25rem;
+  opacity: 0.8;
+  transition: opacity 0.2s ease, background-color 0.2s ease;
+  border-radius: 4px;
+}
+
+.lightbox-prev:hover,
+.lightbox-next:hover {
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.lightbox-prev {
+  left: 1.5rem;
+}
+
+.lightbox-next {
+  right: 1.5rem;
+}
+
+.lightbox-close:focus-visible,
+.lightbox-prev:focus-visible,
+.lightbox-next:focus-visible {
+  outline: 2px solid white;
+  outline-offset: 2px;
+}
+
+/* ============================================
+   Responsive
+   ============================================ */
+
+@media (max-width: 640px) {
+  .site-header {
+    padding: 0.875rem 20px;
+  }
+
+  .header-right {
+    gap: 1rem;
+  }
+
+  .nav-link {
+    font-size: 15px;
+  }
+
+  .site-name {
+    font-size: 16px;
+  }
+}

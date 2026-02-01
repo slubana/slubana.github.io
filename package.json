@@ -1,0 +1,14 @@
+{
+  "name": "slubana-github-io",
+  "version": "1.0.0",
+  "description": "Personal website - Jekyll + GitHub Pages",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:gallery": "node scripts/build-gallery.mjs"
+  },
+  "devDependencies": {
+    "fast-glob": "^3.3.2",
+    "sharp": "^0.33.2"
+  }
+}

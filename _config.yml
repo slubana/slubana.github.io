@@ -1,0 +1,33 @@
+# Site settings
+title: Sehajpreet Lubana
+name: Sehajpreet Lubana
+url: "https://slubana.github.io"
+baseurl: ""  # Empty for root domain (slubana.github.io)
+
+# Build settings
+markdown: kramdown
+permalink: /blog/:title/  # Blog posts at /blog/<slug>/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+# Exclude from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - package.json
+  - package-lock.json
+  - scripts/
+  - gallery-originals/
+  - .claude/
+  - todo.md
+  - README.md
+
+# No SEO plugins (per spec)
+plugins: []

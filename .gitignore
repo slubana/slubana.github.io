@@ -1,0 +1,27 @@
+# local-only originals
+gallery-originals/
+
+# node deps for local gallery script
+node_modules/
+
+# Jekyll build output
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# OS/editor noise
+.DS_Store
+.vscode/
+
+.bundle/
+vendor/
+*.log
+.env
+.env.*
+Thumbs.db
+Desktop.ini
+Gemfile.lock
+
+# Local documentation
+README.md

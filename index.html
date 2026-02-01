@@ -1,51 +1,65 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | Sehajpreet Lubana</title>
-    <link rel="stylesheet" href="./css/styles.css">
-    <link rel="shortcut icon" href="favicon.ico">
-</head>
-<body>
+---
+layout: default
+title: Home
+---
+<h1>Hi, I'm Sehaj</h1>
+<div class="bio">
+  <p>I'm a Product Marketing Manager at <a href="https://www.sage.com/en-us/sage-business-cloud/intacct/">Sage Intacct</a>, focused on the Sage Intacct Platform.</p>
+  <p>Previously, I completed an MFin at McGill after studying Mechatronics Engineering at the University of Waterloo.</p>
+  <p>Based in Vancouver, interested in the intersection of technology and business.</p>
+</div>
 
-    <!-- Navigation Bar -->
-    <nav>
-        <div class="nav-left">
-            <a href="index.html" class="logo">Sehajpreet Lubana</a>
-        </div>
-        <div class="nav-right">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="blog.html">Blog</a>
-        </div>
-    </nav>
+<section class="blog-section">
+  <h2>Blog</h2>
+  <ul class="post-list">
+    {% assign recent_posts = site.posts | limit: 5 %}
+    {% for post in recent_posts %}
+    <li class="post-item">
+      <a href="{{ post.url | relative_url }}" class="post-link">
+        <div class="post-title">{{ post.title }}</div>
+        <div class="post-date">{{ post.date | date: "%Y-%m-%d" }}</div>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+  {% if site.posts.size > 5 %}
+  <a href="{{ '/blog/' | relative_url }}" class="view-all">View all</a>
+  {% endif %}
+</section>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <img src="./images/profile-pic.jpg" alt="Profile Picture" class="profile-pic">
-            <div class="hero-text">
-                <h1>Sehajpreet Lubana</h1>
-                <p class="title">Product | Vancouver, BC</p>
-                <p class="description">
-                    BASc in Mechatronics Engineering (UWaterloo) and Master of Management in Finance (McGill). 
-                    Currently, the Product Marketing Manager for the Sage Intacct Platform.
-                </p>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/sehajpreetlubana" target="_blank">
-                        <img src="./images/linkedin.png" alt="LinkedIn"> 
-                    </a>
-                    <a href="https://github.com/slubana" target="_blank">
-                        <img src="./images/github.png" alt="GitHub"> 
-                    </a>
-                    <a href="mailto:sehajpreet.lubana@mail.mcgill.ca">
-                        <img src="./images/email.png" alt="Email"> 
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
+{% if site.data.gallery_manifest.size > 0 %}
+<section class="gallery-section">
+  <h2>Gallery</h2>
+  <div class="home-gallery-grid">
+    {% for item in site.data.gallery_manifest limit: 3 %}
+    <img
+      src="{{ item.thumb | relative_url }}"
+      data-full="{{ item.full | relative_url }}"
+      alt="Photo from {{ item.date }}"
+      class="gallery-image home-gallery-image"
+      loading="lazy">
+    {% endfor %}
+  </div>
+  {% if site.data.gallery_manifest.size > 3 %}
+  <a href="{{ '/gallery/' | relative_url }}" class="view-all">View all</a>
+  {% endif %}
+</section>
 
-</body>
-</html>
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox" style="display: none;">
+  <div class="lightbox-backdrop"></div>
+  <div class="lightbox-content">
+    <button class="lightbox-close" aria-label="Close">&times;</button>
+    <button class="lightbox-prev" aria-label="Previous">‹</button>
+    <button class="lightbox-next" aria-label="Next">›</button>
+    <img id="lightbox-image" src="" alt="">
+  </div>
+</div>
+<script src="{{ '/assets/js/lightbox.js' | relative_url }}"></script>
+{% endif %}
+
+{% include icon-links.html %}
+
+<div class="last-updated">
+  Last updated: {{ site.time | date: "%Y-%m-%d" }}
+</div>

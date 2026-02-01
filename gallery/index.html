@@ -1,0 +1,36 @@
+---
+layout: default
+title: Gallery
+---
+
+<h1>Gallery</h1>
+
+{% if site.data.gallery_manifest.size > 0 %}
+<div class="gallery-grid">
+  {% for item in site.data.gallery_manifest %}
+  <img
+    src="{{ item.thumb | relative_url }}"
+    data-full="{{ item.full | relative_url }}"
+    data-id="{{ item.id }}"
+    alt="Photo from {{ item.date }}"
+    class="gallery-image"
+    loading="lazy"
+    decoding="async">
+  {% endfor %}
+</div>
+
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox" style="display: none;">
+  <div class="lightbox-backdrop"></div>
+  <div class="lightbox-content">
+    <button class="lightbox-close" aria-label="Close">&times;</button>
+    <button class="lightbox-prev" aria-label="Previous">‹</button>
+    <button class="lightbox-next" aria-label="Next">›</button>
+    <img id="lightbox-image" src="" alt="">
+  </div>
+</div>
+
+<script src="{{ '/assets/js/lightbox.js' | relative_url }}"></script>
+{% else %}
+<p class="gallery-empty">No photos yet. Check back soon!</p>
+{% endif %}
