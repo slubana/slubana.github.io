@@ -2,6 +2,18 @@
    Theme Variables
    ============================================ */
 
+/* Default: light theme (fallback if data-theme not set) */
+:root {
+  --bg: #F7F3EA;
+  --text: #111111;
+  --muted: #4B4B4B;
+  --border: #E6E0D6;
+  --link: #2F6FED;
+  --linkHover: #2459BD;
+  --cardBg: #FBF8F2;
+  --shadow: rgba(17, 17, 17, 0.06);
+}
+
 :root[data-theme="light"] {
   --bg: #F7F3EA;
   --text: #111111;
